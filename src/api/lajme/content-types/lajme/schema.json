@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "lajmes",
+  "info": {
+    "singularName": "lajme",
+    "pluralName": "lajmes",
+    "displayName": "Lajme"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Pershkrimi": {
+      "type": "text"
+    },
+    "Foto": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

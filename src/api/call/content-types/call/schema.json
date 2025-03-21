@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "calls",
+  "info": {
+    "singularName": "call",
+    "pluralName": "calls",
+    "displayName": "Call"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Emri": {
+      "type": "string"
+    },
+    "Email": {
+      "type": "email"
+    },
+    "Description": {
+      "type": "text"
+    }
+  }
+}
