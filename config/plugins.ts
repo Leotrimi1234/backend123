@@ -1,16 +1,15 @@
 
-  
 
 
-
-  module.exports = {
-    upload: {
-      provider: 'local',  // Mund të zgjidhni dhe provider të tjerë si 'aws-s3' etj.
+module.exports = ({ env }) => ({
+  upload: {
+    config: {
+      provider: '@strapi/provider-upload-cloudinary',
       providerOptions: {
-        // Mund të shtoni opsione të tjera nëse janë të nevojshme.
-      },
-      config: {
-        sizeLimit: 10000000,  // Vendosim kufirin për madhësinë e skedarëve këtu (10MB).
+        cloud_name: env('dnzqnuhxb'),
+        api_key: env('968985634824867'),
+        api_secret: env('-9xWxDnXwsrPIxkQs'),
       },
     },
-  };
+  },
+});
