@@ -5,10 +5,9 @@ module.exports = [
   {
     name: 'strapi::cors',
     config: {
-      enabled: true,
       origin: [
         'http://localhost:3000',  
-       "https://frontend1234-pi.vercel.app" // URL e frontend-it të deployuar
+        "https://frontend1234-pi.vercel.app" // URL e frontend-it të deployuar
       ],
       methods: ['GET', 'POST', 'PUT', 'DELETE'],
       allowedHeaders: ['Content-Type', 'Authorization'],
@@ -22,20 +21,28 @@ module.exports = [
         useDefaults: true,
         directives: {
           'connect-src': ["'self'", 'https:'],
-          'img-src': ["'self'", 'data:', 'blob:', 'market-assets.strapi.io', 'res.cloudinary.com'],
+          'img-src': [
+            "'self'",
+            'data:',
+            'blob:',
+            'market-assets.strapi.io',
+            'res.cloudinary.com',
+            'backend123-zs0m.onrender.com' // ✅ Shto backend-in këtu!
+          ],
           'media-src': [
             "'self'",
             'data:',
             'blob:',
             'market-assets.strapi.io',
             'res.cloudinary.com',
+            'backend123-zs0m.onrender.com' // ✅ Shto backend-in edhe këtu!
           ],
           upgradeInsecureRequests: null,
         },
       },
     },
   },
-  
+
   'strapi::poweredBy',
   'strapi::query',
   'strapi::body',
@@ -43,8 +50,3 @@ module.exports = [
   'strapi::favicon',
   'strapi::public',
 ];
-
-
-
-
-
