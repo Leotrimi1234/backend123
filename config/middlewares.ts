@@ -7,7 +7,7 @@ module.exports = [
     config: {
       origin: [
         'http://localhost:3000',  
-        "hhttps://frontend1234-six.vercel.app/" // URL e frontend-it të deployuar
+        'https://frontend1234-six.vercel.app/' // URL e frontend-it të deployuar
       ],
       methods: ['GET', 'POST', 'PUT', 'DELETE'],
       allowedHeaders: ['Content-Type', 'Authorization'],
