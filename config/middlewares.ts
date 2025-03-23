@@ -3,6 +3,16 @@ module.exports = [
   'strapi::errors',
   
   {
+    name: 'strapi::cors',
+    config: {
+      enabled: true,
+      origin: ['http://localhost:3000', ],  // Vendos këtu URL-në e frontend-it
+      methods: ['GET', 'POST', 'PUT', 'DELETE'],
+      allowedHeaders: ['Content-Type', 'Authorization'],
+    },
+  },
+
+  {
     name: 'strapi::security',
     config: {
       contentSecurityPolicy: {
@@ -22,6 +32,7 @@ module.exports = [
       },
     },
   },
+  
   'strapi::poweredBy',
   'strapi::query',
   'strapi::body',
@@ -29,4 +40,7 @@ module.exports = [
   'strapi::favicon',
   'strapi::public',
 ];
+
+
+
 
