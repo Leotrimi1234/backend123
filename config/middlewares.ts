@@ -1,14 +1,14 @@
 module.exports = [
   'strapi::logger',
   'strapi::errors',
-  
+
   {
     name: 'strapi::cors',
     config: {
       enabled: true,
       origin: [
-        'http://localhost:3000',  // Mund ta mbash këtë për zhvillim lokal
-        'https://frontend1234-neon.vercel.app', // Vendos URL-në e frontend-it të deploy-uar këtu
+        'http://localhost:3000',  
+        'https://frontend1234-kcb3.vercel.app'  // URL e frontend-it të deployuar
       ],
       methods: ['GET', 'POST', 'PUT', 'DELETE'],
       allowedHeaders: ['Content-Type', 'Authorization'],
