@@ -6,7 +6,10 @@ module.exports = [
     name: 'strapi::cors',
     config: {
       enabled: true,
-      origin: ['http://localhost:3000', ],  // Vendos këtu URL-në e frontend-it
+      origin: [
+        'http://localhost:3000',  // Mund ta mbash këtë për zhvillim lokal
+        'https://frontend1234-neon.vercel.app', // Vendos URL-në e frontend-it të deploy-uar këtu
+      ],
       methods: ['GET', 'POST', 'PUT', 'DELETE'],
       allowedHeaders: ['Content-Type', 'Authorization'],
     },
@@ -40,6 +43,7 @@ module.exports = [
   'strapi::favicon',
   'strapi::public',
 ];
+
 
 
 

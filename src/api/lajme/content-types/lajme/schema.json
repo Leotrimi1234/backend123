@@ -4,7 +4,8 @@
   "info": {
     "singularName": "lajme",
     "pluralName": "lajmes",
-    "displayName": "Lajme"
+    "displayName": "Lajme",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -21,7 +22,7 @@
         "audios"
       ],
       "type": "media",
-      "multiple": true
+      "multiple": false
     }
   }
 }

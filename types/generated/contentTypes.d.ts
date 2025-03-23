@@ -399,6 +399,7 @@ export interface ApiCallCall extends Struct.CollectionTypeSchema {
 export interface ApiLajmeLajme extends Struct.CollectionTypeSchema {
   collectionName: 'lajmes';
   info: {
+    description: '';
     displayName: 'Lajme';
     pluralName: 'lajmes';
     singularName: 'lajme';
@@ -410,10 +411,7 @@ export interface ApiLajmeLajme extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    Foto: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios',
-      true
-    >;
+    Foto: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::lajme.lajme'> &
       Schema.Attribute.Private;
@@ -439,10 +437,7 @@ export interface ApiOfertaOferta extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    Foto: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios',
-      true
-    >;
+    Foto: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
