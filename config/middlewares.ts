@@ -1,14 +1,25 @@
 module.exports = [
   'strapi::logger',
   'strapi::errors',
-  'strapi::security',
+  
   {
-    name: 'strapi::cors',
+    name: 'strapi::security',
     config: {
-      enabled: true,
-      origin: ['http://localhost:3000'],  // Vendos këtu URL-në e frontend-it
-      methods: ['GET', 'POST', 'PUT', 'DELETE'],
-      allowedHeaders: ['Content-Type', 'Authorization'],
+      contentSecurityPolicy: {
+        useDefaults: true,
+        directives: {
+          'connect-src': ["'self'", 'https:'],
+          'img-src': ["'self'", 'data:', 'blob:', 'market-assets.strapi.io', 'res.cloudinary.com'],
+          'media-src': [
+            "'self'",
+            'data:',
+            'blob:',
+            'market-assets.strapi.io',
+            'res.cloudinary.com',
+          ],
+          upgradeInsecureRequests: null,
+        },
+      },
     },
   },
   'strapi::poweredBy',
